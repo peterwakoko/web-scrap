@@ -13,7 +13,7 @@
     <form action="scrap.php" method="post">
         <div class="url">
         <!-- <label for="site">Search</label> -->
-        <input type='url' name ='site' id="site" placeholder="Enter a URL"><br>
+        <input type='url' name ='site' id="site" placeholder="Enter scraping URL"><br>
         </div>
         <div class="btn">
         <input type='submit' name='Scrap' value="Search"><br>
