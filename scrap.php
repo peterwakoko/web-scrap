@@ -9,9 +9,9 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $html = curl_exec($ch);
 
 // var_dump($html);
-
+ 
 $dom = new DOMDocument();
-@ $dom->loadHTML($html);
+@$dom->loadHTML($html);
 
 
 //https://jiji.ug/mobile-phones-tablets
@@ -34,16 +34,16 @@ $dom = new DOMDocument();
 // }
 foreach($dom->getElementsByTagName('div') as $ptag)
 {
+?>
+<div>
+    <?php
     if($ptag->getAttribute('class')=="compare-package-item")
     {
-        
-        // foreach($pack as $pa){
-        //     $title_text = $pa->textContent;
-        //     $pack_array[]=$title_text;
-        //     echo $title_text .'<br>';
-        // }
-        
-        echo $ptag->nodeValue ."<br><hr><br><br>"; //"prints" Some text
-
-    }
+        ?>
+    <p style="color: blue">
+        <?php echo $ptag->nodeValue ."<br><hr><br><br>"; //"prints" Some text ?>
+    </p>
+    <?php }  ?>
+</div>
+<?php  
 }
