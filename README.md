@@ -1,2 +1,2 @@
 # dstv-compare-packages-scrap
-## This is a web scrap done on the dstv website
+## This is a web scrap done on the dstv website.
